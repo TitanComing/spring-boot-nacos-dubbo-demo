@@ -1,0 +1,16 @@
+server:
+  port: 8861
+dubbo:
+  # 应用属性
+  application:
+    name: dubbo-provider
+    # 禁用QOS,防止同一台机器出现端口冲突
+    qos-enable: false
+    qos-accept-foreign-ip: false
+  # 注册中心
+  registry:
+    address: nacos://127.0.0.1:8848
+  # 协议地址-协议由提供方指定，消费方被动接受
+  protocol:
+    name: dubbo
+    port: 20880

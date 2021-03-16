@@ -1,0 +1,14 @@
+server:
+  port: 8862
+dubbo:
+  # 应用属性
+  application:
+    name: dubbo-consumer
+    # 禁用QOS,防止同一台机器出现端口冲突
+    qos-enable: false
+    qos-accept-foreign-ip: false
+  registry:
+    address: nacos://127.0.0.1:8848
+  # 消费端的超时设置
+  consumer:
+    timeout: 4000
