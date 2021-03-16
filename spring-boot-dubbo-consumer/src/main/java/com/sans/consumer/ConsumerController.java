@@ -19,8 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/consumer")
 public class ConsumerController {
-    // Dubbo远程调用注解
-    @Reference
+    @Reference  // Dubbo远程调用注解,2.7.8之后改为@DubboReference
     private IProviderService providerService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)

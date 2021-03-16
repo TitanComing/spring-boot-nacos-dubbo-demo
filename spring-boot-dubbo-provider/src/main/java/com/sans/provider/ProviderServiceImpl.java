@@ -11,7 +11,7 @@ import java.util.List;
  * @Author Sans
  * @CreateTime 2019/11/6 23:01
  */
-@Service
+@Service  //这个是dubbo的注解，2.7.8之后改为@DubboService
 public class ProviderServiceImpl implements IProviderService {
     @Override
     public List<ProviderTestDTO> queryList() {
